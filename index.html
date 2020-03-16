@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <title>New Tab</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+<body id="bodyId">
+
+
+<div class="upperPart">
+    <div>
+        <a href = "#" class = "Underline"><p>Gmail</p></a> &nbsp; &nbsp; &nbsp;
+        <a href="#" class="Underline"><p>Images</p></a> &nbsp; &nbsp; &nbsp;
+        <img class="app" onclick="getApplications()" src="applications.png" width="25" height="15">
+    </div>
+
+    <div class="appsClass" id="appsId">
+        <a class = "appBox account" href="#">Account</a>
+        <a class = "appBox google" href="#">Search</a>
+        <a class = "appBox maps" href="#">Maps</a>
+        <a class = "appBox youtube" href="#">Youtube</a>
+        <a class = "appBox play" href="#">Play</a>
+        <!--<a class = "appBox news" href="#">News</a>-->
+        <a class = "appBox mail" href="https://www.google.com/intl/en-GB/gmail/about/#">Gmail</a>
+        <a class = "appBox contacts" href="#">Contacts</a>
+        <a class = "appBox drive" href="#">Drive</a>
+        <a class = "appBox calendar" href="#">Calendar</a>
+        <a class = "appBox translate" href="#">Translate</a>
+        <a class = "appBox photos" href="#">Photos</a>
+        <a class = "appBox shopping" href="#">Shopping</a>
+        <a class = "appBox duo" href="#">Duo</a>
+
+        <br><br>
+        <button style="border-radius:4px; border:1px solid blue; padding:4px;float:right; background-color:white" onclick="closing()">close</button>
+    </div>
+</div>
+
+
+<div  class = "centerPart">
+  <center>
+    <h1>
+        <span style = "color:DodgerBlue">G</span>
+        <span style = "color:red">o</span>
+        <span style = "color:gold">o</span>
+        <span style = "color:DodgerBlue">g</span>
+        <span style = "color:green">l</span>
+        <span style = "color:red">e</span>
+    </h1>
+      <input class="searchBar" type="text" placeholder="  Search Google or type a url" size="45">
+
+  </center>
+</div>
+
+
+<br><br>
+<center>
+    <div class="shortcutDiv" style="height:150px;width:150px;">
+        <button class="shortcut">+</button><br><br>
+        Add shortcut
+    </div>
+</center>
+
+
+<div>
+    <button onclick="openCustomizations()" class="customizeButton">Customize</button>
+</div>
+
+<div id="custom" class="customModal">
+
+    <div style="overflow:auto;padding-left:10px;padding-top:10px;background-color:white;width:650px;height:360px;border:0.2px solid blue;border-radius:4px;">
+        <center> <p>Customize This Page</p></center><br>
+        <div style="float:left;width:150px;">
+            BackGround<br><br>
+            Shortcuts<br><br>
+            Color and theme
+        </div>
+
+        <div style="float:left; width:500px;">
+            <button class="customOption">Upload from device</button>
+            <button onclick="noBackground()" class="customOption noBackground">No background</button>
+            <button onclick="landScapes()" class="customOption landScape">Landscapes</button>
+            <button class="customOption textures">Textures</button>
+            <button class="customOption life">Life</button>
+            <button class="customOption earth">Earth</button>
+            <button class="customOption">Art</button>
+            <button class="customOption">Cityscapes</button>
+            <button class="customOption">Geometric shapes</button>
+            <button class="customOption">Solid colrs</button>
+            <button class="customOption">Seascapes</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <button onclick="closing()" class="footerButton">Done</button>&nbsp; &nbsp;
+        <button id="cancel" onclick="cancel()" class="footerButton">cancel</button>
+
+    </div>
+</div>
+
+
+
+<script>
+
+let bodyId = document.getElementById("bodyId");
+    function getApplications(){
+
+        let divId = document.getElementById("appsId");
+        divId.style.display="block";
+    }
+
+    function closing()
+    {
+        let appsId = document.getElementById("appsId");
+        appsId.style.display="none";
+
+        let customId = document.getElementById("custom");
+        customId.style.display = "none";
+    }
+
+    function openCustomizations()
+    {
+        let customDiv = document.getElementById("custom");
+        customDiv.style.display="block";
+    }
+
+
+    function noBackground()
+    {
+        bodyId.style.background = "white";
+    }
+
+    function landScapes()
+    {
+        bodyId.style.backgroundImage = "url('landscape.png')";
+        backgroundSettings();
+    }
+
+    function backgroundSettings()
+    {
+        bodyId.style.backgroundRepeat = "no-repeat";
+        bodyId.style.backgroundSize = "100%";
+    }
+
+    function cancel()
+    {
+        bodyId.style.backgroundImage = "none";
+        closing();
+    }
+
+
+    /*window.onclick=function(event){
+        let eventTarget = event.target;
+        let appsId = document.getElementById("appsId");
+        let customId = document.getElementById("custom");
+
+        if(eventTarget == customId)
+            customId.style.display = "none";
+    }*/
+
+
+</script>
+<a style="width:60px;height:60px;border:1px solid blue; " href="#">sample</a>
+
+</body>
+</html>
