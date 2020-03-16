@@ -1,0 +1,271 @@
+
+        .centerPart{
+            margin-top: 170px;
+            font-size : 40px;
+
+        }
+
+        a{
+            color:black;
+            text-decoration:none;
+        }
+
+        .appBox{
+            background-color:white;
+            width:100px;
+
+            margin-top:8px;
+            margin-right:6px;
+            display:inline-block;
+            text-align: center;
+            padding-top:85px;
+            padding-bottom:5px;
+
+            background-repeat:no-repeat;
+            background-size:75px;
+            background-position:center;
+        }
+
+        .account{
+            background-image:url('account.png');
+
+        }
+
+        .google{
+            background-image:url('google.png');
+
+        }
+
+        .maps{
+            background-image:url('maps.png');
+
+        }
+
+        .youtube{
+            background-image:url('youtube.png');
+            background-size:60px;
+        }
+
+        .play{
+            background-image:url('play.png');
+
+        }
+
+        .news{
+            background-image:url('news.png');
+
+        }
+
+        .mail{
+            background-image:url('mail.png');
+            background-size:60px;
+        }
+
+        .contacts{
+            background-image:url('contacts.png');
+            background-size:60px;
+
+        }
+
+        .drive{
+            background-image:url('drive.png');
+
+        }
+
+        .calendar{
+            background-image:url('calendar.png');
+        }
+
+        .translate{
+            background-image:url('translate.png');
+        }
+
+        .shopping{
+            background-image:url('shopping.png');
+        }
+
+        .duo{
+            background-image:url('duo.png');
+        }
+
+        .photos{
+            background-image:url('photos.png');
+        }
+
+        .appBox:hover{
+
+            border:1px solid #add8e6;
+        }
+
+        .Underline:hover {
+            text-decoration:underline;
+        }
+
+        p{
+            display : inline;
+            font-size:15px;
+        }
+
+        .customizeButton{
+            border-radius:20px;
+            border:1px solid #C0C0C0;
+            margin-top:170px;
+            margin-left:1320;
+            height:30px;
+            background-color:white;
+            color:blue;
+
+
+            background-image:url('edit.png');
+            background-size:15px;
+            background-repeat:no-repeat;
+            padding-left:25px;
+            padding-right:10px;
+            background-position:left;
+        }
+
+        .customizeButton:hover{
+            background-color: #b7d7e8;
+        }
+
+        .searchBar
+        {
+           border-radius: 20px;
+           border:0.2px solid #C0C0C0;
+           height:40px;margin-top:0px;
+           font-size:20px;
+           padding-left:70px;
+
+           background-image:url('search.png');
+            background-size:35px;
+            background-repeat:no-repeat;
+            padding-left:20px;
+            padding-right:10px;
+            background-position:left;
+        }
+
+        .app:hover{
+            border-radius:30px;
+            border : 1px solid #C0C0C0;
+            background:#C0C0C0;
+
+        }
+
+        .shortcut{
+            padding:30px;
+            border-radius:45px;
+            background:#f2f2f2;
+            border:1px solid #f2f2f2;
+            font-size:20px;
+        }
+
+        .shortcutDiv:hover{
+            padding-top:20px;
+            background:#f2f2f2;
+
+        }
+
+        .appsClass{
+            display:none;
+            margin-top:20px;
+            padding:8px;
+            border:0.2px solid blue;
+            height:390px;
+            width:330px;
+            position:relative;
+            right:140px;
+            border-radius:4px;
+
+            overflow:auto;
+        }
+
+        .upperPart{
+            margin-left:1200px;
+            margin-top:20px;
+            padding-top:10px;
+
+
+            height:40px;
+        }
+
+        .customModal{
+            display: none; /* Hidden by default */
+            position:fixed; /* Stay in place */
+            padding-top: 100px; /* Location of the box */
+            top:0;
+            left:0;
+            padding-left:430px;
+            padding-top:200px;
+            width:100%;
+            height:100%;
+            background-color:rgba(255,255,255,0.6);
+        }
+
+        .customOption{
+            width:150px;
+            height:150px;
+            color:rgb(255,2,255);
+            font-size:14px;
+            background-color:white;
+            border:0.5px solid #C0C0C0;
+            margin-left:8px;
+            margin-top:10px;
+        }
+
+        .footerButton{
+            color:blue;
+            border-raduis:4px;
+            padding:10px;
+            width:60px;
+            background-color:white;
+            border:0.5px solid black;
+            float:right;
+        }
+
+        .footerButton:hover{
+            background-color:rgb(0,255,250);
+        }
+
+        .footer{
+            position:fixed;
+            top:520px;
+            height:40px;
+            margin-top:50px;
+
+            padding-top:10px;
+            width:645px;
+            padding:8px;
+            border:0.2px solid blue;
+            background-color:white;
+            border-radius:4px;
+        }
+
+        .landScape{
+            background-image:url("landscape.png");
+            background-repeat:no-repeat;
+            background-size:180px;
+        }
+
+        .life{
+            background-image:url("life.png");
+            background-repeat:no-repeat;
+            background-size:180px;
+        }
+
+        .earth{
+            background-image:url("earth.png");
+            background-repeat:no-repeat;
+            background-size:180px;
+        }
+
+        .noBackground{
+            background-image:url("noBackground.png");
+            background-repeat:no-repeat;
+            background-size:180px;
+        }
+
+        .textures{
+            background-image:url("textures.png");
+            background-repeat:no-repeat;
+            background-size:180px;
+        }
