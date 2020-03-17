@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <title>New Tab</title>
+    <title style="background:red;">New Tab</title>
+
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -23,8 +24,7 @@
         <a class = "appBox maps" href="#">Maps</a>
         <a class = "appBox youtube" href="#">Youtube</a>
         <a class = "appBox play" href="#">Play</a>
-        <!--<a class = "appBox news" href="#">News</a>-->
-        <a class = "appBox mail" href="https://www.google.com/intl/en-GB/gmail/about/#">Gmail</a>
+        <a class = "appBox mail" href="#">Gmail</a>
         <a class = "appBox contacts" href="#">Contacts</a>
         <a class = "appBox drive" href="#">Drive</a>
         <a class = "appBox calendar" href="#">Calendar</a>
@@ -68,6 +68,8 @@
     <button onclick="openCustomizations()" class="customizeButton">Customize</button>
 </div>
 
+&larr; &larr;
+
 <div id="custom" class="customModal">
 
     <div style="overflow:auto;padding-left:10px;padding-top:10px;background-color:white;width:650px;height:360px;border:0.2px solid blue;border-radius:4px;">
@@ -78,19 +80,32 @@
             Color and theme
         </div>
 
-        <div style="float:left; width:500px;">
+        <div id="backgroundImages" style="float:left; width:500px; display:inline;">
             <button class="customOption">Upload from device</button>
-            <button onclick="noBackground()" class="customOption noBackground">No background</button>
-            <button onclick="landScapes()" class="customOption landScape">Landscapes</button>
-            <button class="customOption textures">Textures</button>
-            <button class="customOption life">Life</button>
-            <button class="customOption earth">Earth</button>
-            <button class="customOption">Art</button>
-            <button class="customOption">Cityscapes</button>
-            <button class="customOption">Geometric shapes</button>
-            <button class="customOption">Solid colrs</button>
-            <button class="customOption">Seascapes</button>
+            <button id="noBackground" onclick="setBackgroundImage(this.id)" class="customOption noBackground">No background</button>
+            <button id="landscapes" onclick="setBackgroundImage(this.id)" class="customOption landScape">Landscapes</button>
+            <button id="textures" onclick="setBackgroundImage(this.id)" class="customOption textures">Textures</button>
+            <button id="life" onclick="setBackgroundImage(this.id)" class="customOption life">Life</button>
+            <button id="earth" onclick="setBackgroundImage(this.id)" class="customOption earth">Earth</button>
+            <button id="art" onclick="setBackgroundImage(this.id)" class="customOption art">Art</button>
+            <button id="cityScapes" onclick="setBackgroundImage(this.id)" class="customOption cityScapes">Cityscapes</button>
+            <button id="geometric" onclick="setBackgroundImage(this.id)" class="customOption geometric">Geometric shapes</button>
+            <button onclick="colors()" class="customOption solidColors">Solid colors</button>
+            <button id="seaScapes" onclick="setBackgroundImage(this.id)" class="customOption seaScapes">Seascapes</button>
         </div>
+
+        <div style="float:left; width:500px; display:none;" id="backgroundColors">
+            <div>
+                <button style="background:white; border:none;" onclick="backToCustom()">&larr;</button> &nbsp; solid colors
+            </div>
+            <div>
+                <button id="cyan" onclick="setBackgroundColor(this.id)" style="background:cyan;" class="customOption">cyan</button>
+                <button id="yellow" onclick="setBackgroundColor(this.id)" style="background:yellow;" class="customOption">yellow</button>
+                <button id="aliceblue" onclick="setBackgroundColor(this.id)" style="background:aliceblue;" class="customOption">aliceblue</button>
+                <button id="gray" onclick="setBackgroundColor(this.id)" style="background:gray;" class="customOption">gray</button>
+            </div>
+        </div>
+
     </div>
 
     <div class="footer">
@@ -105,6 +120,13 @@
 <script>
 
 let bodyId = document.getElementById("bodyId");
+
+    function backToCustom()
+    {
+        document.getElementById("backgroundImages").style.display = "block";
+        document.getElementById("backgroundColors").style.display = "none";
+    }
+
     function getApplications(){
 
         let divId = document.getElementById("appsId");
@@ -126,17 +148,41 @@ let bodyId = document.getElementById("bodyId");
         customDiv.style.display="block";
     }
 
-
-    function noBackground()
-    {
-        bodyId.style.background = "white";
-    }
-
-    function landScapes()
-    {
-        bodyId.style.backgroundImage = "url('landscape.png')";
+     function setBackgroundImage(image)
+     {
+        switch(image)
+        {
+            case 'noBackground':
+                bodyId.style.backgroundImage = "none";
+                bodyId.style.background = "white";
+                break;
+            case 'landscapes':
+                bodyId.style.backgroundImage = "url('landscape.png')";
+                break;
+            case 'textures':
+                bodyId.style.backgroundImage = "url('textures.png')";
+                break;
+            case 'life':
+                bodyId.style.backgroundImage = "url('life.png')";
+                break;
+            case 'earth':
+                bodyId.style.backgroundImage = "url('earth.png')";
+                break;
+            case 'art':
+                bodyId.style.backgroundImage = "url('art.png')";
+                break;
+            case 'cityScapes' :
+                bodyId.style.backgroundImage = "url('cityscapes.png')";
+                break;
+            case 'geometric':
+                bodyId.style.backgroundImage = "url('geometricShapes.png')";
+                break;
+            case 'seaScapes':
+                bodyId.style.backgroundImage = "url('seascapes.png')";
+                break;
+        }
         backgroundSettings();
-    }
+     }
 
     function backgroundSettings()
     {
@@ -144,22 +190,33 @@ let bodyId = document.getElementById("bodyId");
         bodyId.style.backgroundSize = "100%";
     }
 
+     function colors()
+     {
+        document.getElementById("backgroundImages").style.display = "none";
+        document.getElementById("backgroundColors").style.display = "block";
+     }
+
+    function setBackgroundColor(color)
+    {
+        switch(color)
+        {
+            case 'cyan': bodyId.style.background = "cyan";
+                        break;
+            case 'yellow': bodyId.style.background = "yellow";
+                        break;
+            case 'gray': bodyId.style.background = "gray";
+                        break;
+            case 'aliceblue': bodyId.style.background = "aliceblue";
+                        break;
+        }
+    }
+
     function cancel()
     {
         bodyId.style.backgroundImage = "none";
+        bodyId.style.background = "white";
         closing();
     }
-
-
-    /*window.onclick=function(event){
-        let eventTarget = event.target;
-        let appsId = document.getElementById("appsId");
-        let customId = document.getElementById("custom");
-
-        if(eventTarget == customId)
-            customId.style.display = "none";
-    }*/
-
 
 </script>
 <a style="width:60px;height:60px;border:1px solid blue; " href="#">sample</a>
