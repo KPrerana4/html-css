@@ -150,37 +150,18 @@ let bodyId = document.getElementById("bodyId");
 
      function setBackgroundImage(image)
      {
-        switch(image)
-        {
-            case 'noBackground':
-                bodyId.style.backgroundImage = "none";
-                bodyId.style.background = "white";
-                break;
-            case 'landscapes':
-                bodyId.style.backgroundImage = "url('landscape.png')";
-                break;
-            case 'textures':
-                bodyId.style.backgroundImage = "url('textures.png')";
-                break;
-            case 'life':
-                bodyId.style.backgroundImage = "url('life.png')";
-                break;
-            case 'earth':
-                bodyId.style.backgroundImage = "url('earth.png')";
-                break;
-            case 'art':
-                bodyId.style.backgroundImage = "url('art.png')";
-                break;
-            case 'cityScapes' :
-                bodyId.style.backgroundImage = "url('cityscapes.png')";
-                break;
-            case 'geometric':
-                bodyId.style.backgroundImage = "url('geometricShapes.png')";
-                break;
-            case 'seaScapes':
-                bodyId.style.backgroundImage = "url('seascapes.png')";
-                break;
-        }
+        let imagesUrls = {
+            'noBackground' : "none",
+            'landscapes' : "url('landscape.png')",
+            'textures' : "url('textures.png')",
+            'life' : "url('life.png')",
+            'earth' : "url('earth.png')",
+            'art' : "url('art.png')",
+            'cityScapes' : "url('cityScapes.png')",
+            'geometric' : "url('geometricShapes.png')",
+            'seaScapes' : "url('seascapes.png')"
+        };
+        bodyId.style.backgroundImage = imagesUrls[image];
         backgroundSettings();
      }
 
@@ -198,17 +179,7 @@ let bodyId = document.getElementById("bodyId");
 
     function setBackgroundColor(color)
     {
-        switch(color)
-        {
-            case 'cyan': bodyId.style.background = "cyan";
-                        break;
-            case 'yellow': bodyId.style.background = "yellow";
-                        break;
-            case 'gray': bodyId.style.background = "gray";
-                        break;
-            case 'aliceblue': bodyId.style.background = "aliceblue";
-                        break;
-        }
+        bodyId.style.background = color;
     }
 
     function cancel()
