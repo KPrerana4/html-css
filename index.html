@@ -68,7 +68,6 @@
     <button onclick="openCustomizations()" class="customizeButton">Customize</button>
 </div>
 
-&larr; &larr;
 
 <div id="custom" class="customModal">
 
@@ -116,7 +115,6 @@
 </div>
 
 
-
 <script>
 
 let bodyId = document.getElementById("bodyId");
@@ -135,21 +133,17 @@ let bodyId = document.getElementById("bodyId");
 
     function closing()
     {
-        let appsId = document.getElementById("appsId");
-        appsId.style.display="none";
-
-        let customId = document.getElementById("custom");
-        customId.style.display = "none";
+        document.getElementById("appsId").style.display="none";
+        document.getElementById("custom").style.display = "none";
     }
 
     function openCustomizations()
     {
-        let customDiv = document.getElementById("custom");
-        customDiv.style.display="block";
+        document.getElementById("custom").style.display="block";
     }
 
-     function setBackgroundImage(image)
-     {
+    function setBackgroundImage(image)
+    {
         let imagesUrls = {
             'noBackground' : "none",
             'landscapes' : "url('landscape.png')",
@@ -163,7 +157,7 @@ let bodyId = document.getElementById("bodyId");
         };
         bodyId.style.backgroundImage = imagesUrls[image];
         backgroundSettings();
-     }
+    }
 
     function backgroundSettings()
     {
@@ -171,11 +165,11 @@ let bodyId = document.getElementById("bodyId");
         bodyId.style.backgroundSize = "100%";
     }
 
-     function colors()
-     {
+    function colors()
+    {
         document.getElementById("backgroundImages").style.display = "none";
         document.getElementById("backgroundColors").style.display = "block";
-     }
+    }
 
     function setBackgroundColor(color)
     {
@@ -190,7 +184,6 @@ let bodyId = document.getElementById("bodyId");
     }
 
 </script>
-<a style="width:60px;height:60px;border:1px solid blue; " href="#">sample</a>
 
 </body>
 </html>
