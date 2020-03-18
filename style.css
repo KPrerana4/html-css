@@ -27,69 +27,69 @@
         }
 
         .account{
-            background-image:url('account.png');
+            background-image:url('images/account.png');
 
         }
 
         .google{
-            background-image:url('google.png');
+            background-image:url('images/google.png');
 
         }
 
         .maps{
-            background-image:url('maps.png');
+            background-image:url('images/maps.png');
 
         }
 
         .youtube{
-            background-image:url('youtube.png');
+            background-image:url('images/youtube.png');
             background-size:60px;
         }
 
         .play{
-            background-image:url('play.png');
+            background-image:url('images/play.png');
 
         }
 
         .news{
-            background-image:url('news.png');
+            background-image:url('images/news.png');
 
         }
 
         .mail{
-            background-image:url('mail.png');
+            background-image:url('images/mail.png');
             background-size:60px;
         }
 
         .contacts{
-            background-image:url('contacts.png');
+            background-image:url('images/contacts.png');
             background-size:60px;
 
         }
 
         .drive{
-            background-image:url('drive.png');
+            background-image:url('images/drive.png');
 
         }
 
         .calendar{
-            background-image:url('calendar.png');
+            background-image:url('images/calendar.png');
         }
 
         .translate{
-            background-image:url('translate.png');
+            background-image:url('images/translate.png');
         }
 
         .shopping{
-            background-image:url('shopping.png');
+            background-image:url('images/shopping.png');
         }
 
         .duo{
-            background-image:url('duo.png');
+            background-image:url('images/duo.png');
         }
 
         .photos{
-            background-image:url('photos.png');
+            background-image:url('images/photos.png');
         }
 
         .appBox:hover{
@@ -116,7 +116,7 @@
             color:blue;
 
 
-            background-image:url('edit.png');
+            background-image:url('images/edit.png');
             background-size:15px;
             background-repeat:no-repeat;
             padding-left:25px;
@@ -136,7 +136,7 @@
            font-size:20px;
            padding-left:70px;
 
-           background-image:url('search.png');
+           background-image:url('images/search.png');
             background-size:35px;
             background-repeat:no-repeat;
             padding-left:20px;
@@ -189,9 +189,9 @@
         }
 
         .customModal{
-            display: none; /* Hidden by default */
-            position:fixed; /* Stay in place */
-            padding-top: 100px; /* Location of the box */
+            display: none;
+            position:fixed;
+            padding-top: 100px;
             top:0;
             left:0;
             padding-left:430px;
@@ -210,6 +210,9 @@
             border:0.5px solid #C0C0C0;
             margin-left:8px;
             margin-top:10px;
+
+            background-repeat:no-repeat;
+            background-size:180px;
         }
 
         .footerButton{
@@ -220,6 +223,7 @@
             background-color:white;
             border:0.5px solid black;
             float:right;
+            font-size:15px;
         }
 
         .footerButton:hover{
@@ -241,31 +245,42 @@
         }
 
         .landScape{
-            background-image:url("landscape.png");
-            background-repeat:no-repeat;
-            background-size:180px;
+            background-image:url("images/landscape.png");
         }
 
         .life{
-            background-image:url("life.png");
-            background-repeat:no-repeat;
-            background-size:180px;
+            background-image:url("images/life.png");
         }
 
         .earth{
-            background-image:url("earth.png");
-            background-repeat:no-repeat;
-            background-size:180px;
+            background-image:url("images/earth.png");
         }
 
         .noBackground{
-            background-image:url("noBackground.png");
-            background-repeat:no-repeat;
-            background-size:180px;
+            background-image:url("images/noBackground.png");
         }
 
         .textures{
-            background-image:url("textures.png");
-            background-repeat:no-repeat;
-            background-size:180px;
+            background-image:url("images/textures.png");
+        }
+
+        .art{
+            background-image:url("images/art.png");
+        }
+
+        .cityScapes{
+            background-image:url("images/cityscapes.png");
+        }
+
+        .geometric{
+            background-image:url("images/geometricShapes.png");
+        }
+
+        .seaScapes{
+            background-image:url("images/seascapes.png");
+        }
+
+        .solidColors
+        {
+            background-image:url("images/solidColors.png");
         }
